@@ -5,13 +5,17 @@
 \title{Create data.table with CHR, SNP, POS, AF, POP columns}
 \usage{
 create_data_from_plink_files(files_path,
-  pop_name = tail(unlist(strsplit(files_path, "/")), n = 1))
+  pop_name = tail(unlist(strsplit(files_path, "/")), n = 1),
+  one_allele_perline = TRUE)
 }
 \arguments{
 \item{files_path}{string with full path of .bim and .frq files}
 
 \item{pop_name}{string with the name of the population. DEFAULT is the
-prefix of .bim and .frq files}
+prefix of .bim and .frq files.}
+
+\item{one_allele_perline}{boolean. Transform data from one SNP per line to
+one allele per line, Default TRUE.}
 }
 \value{
 data.table with the information of .bim and .frq files
