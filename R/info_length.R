@@ -27,5 +27,4 @@ info_length <-
                  PIn := In  - i.In,
                  on = .(CHR, POS, SNP)][
                  !is.na(PIn)][, In := NULL][]
-      return(info_PIn)
   }
